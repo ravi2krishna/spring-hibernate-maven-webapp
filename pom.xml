@@ -157,5 +157,21 @@
 		</pluginManagement>
 		<finalName>SpringHibernateExample</finalName>
 	</build>
+    <repositories>
+        <repository>
+          <id>springgroup</id>
+          <url>http://104.197.156.171:8081/nexus/content/groups/springgroup/</url>
+        </repository>
+   </repositories>
+   <distributionManagement>
+        <snapshotRepository>
+            <id>springsnap</id>
+            <url>http://104.197.156.171:8081/nexus/content/repositories/springsnap/</url>
+        </snapshotRepository>
+        <repository>
+            <id>springrelease</id>
+            <url>http://104.197.156.171:8081/nexus/content/repositories/springrelease/</url>
+        </repository>
+</distributionManagement>
 </project>
 
