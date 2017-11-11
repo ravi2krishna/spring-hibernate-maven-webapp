@@ -18,6 +18,7 @@
 
 <body>
 	<h2>List of Employees!!!!</h2>	
+<img src="http://7-themes.com/data_images/out/57/6964732-huge-shark.jpg"> 
 	<table>
 		<tr>
 			<td>NAME</td><td>Joining Date</td><td>Salary</td><td>SSN</td><td></td>
