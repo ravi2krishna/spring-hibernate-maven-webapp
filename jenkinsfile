@@ -1,8 +1,13 @@
 pipeline {
 
 	agent any 
-	checkout scm
-		stages {
+	
+	stages {
+		stage(scm) {
+		step {
+			git https://github.com/avinasharuri/spring-hibernate-maven-webapp.git
+		}
+		
 		stage (compile) {
 		steps {
 			sh 'mvn compile' 
