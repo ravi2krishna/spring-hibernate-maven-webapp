@@ -1,15 +1,16 @@
-pipeline {
-agent any
+ peline {
+        agent any
   stages {
         stage(scm) {
-          step {
+          steps {
                 git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
           }
         }
+
         stage (compile) {
           steps {
                 sh 'mvn compile'
-          }
+                }
+                        }
         }
-        }
-}
+}               
