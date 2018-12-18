@@ -23,8 +23,9 @@
                 }
         stage (package) {
           steps {
-          node (slave1)
+          node ('slave1'){
                 sh 'mvn package'
+                }
           }
         }
         }
