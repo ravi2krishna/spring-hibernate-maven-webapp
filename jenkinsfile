@@ -1,6 +1,8 @@
  pipeline {
         agent any
-
+        tools {
+                maven 'Maven'
+        }
   stages {
         stage(scm) {
           steps {
@@ -20,6 +22,9 @@
                 }
                 }
         stage (package) {
+          steps {
+                git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
+          }
           steps {
           node ('slave1'){
                 sh 'mvn package'
