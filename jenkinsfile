@@ -3,7 +3,7 @@ agent any
   stages {
         stage(scm) {
           step {
-                git https://github.com/avinasharuri/spring-hibernate-maven-webapp.git
+                git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
           }
         }
         stage (compile) {
