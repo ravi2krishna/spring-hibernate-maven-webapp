@@ -1,0 +1,13 @@
+pipeline {
+
+	agent any 
+	checkout scm
+		stages {
+		stage (compile) {
+		steps {
+			sh 'mvn compile' 
+		}
+		stages
+			}
+			}
+	}
