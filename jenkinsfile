@@ -23,10 +23,8 @@
                 }
         stage (package) {
           steps {
+                node ('slave1'){
                 git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
-          }
-          steps {
-          node ('slave1'){
                 sh 'mvn package'
                 }
           }
