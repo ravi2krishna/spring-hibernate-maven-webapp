@@ -1,6 +1,8 @@
  pipeline {
         agent any
- 
+        tools {
+                maven 'Maven'
+        }
   stages {
         stage(scm) {
           steps {
@@ -24,6 +26,14 @@
                 node ('slave1'){
                 git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
                 sh 'mvn package'
+                }
+          }
+        }
+        stage (sonar_analysis) {
+          steps {
+                node ('sonar&nexus'){
+                git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
+                sh 'sonar:sonar'
                 }
           }
         }
