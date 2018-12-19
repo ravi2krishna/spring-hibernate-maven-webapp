@@ -29,5 +29,13 @@
                 }
           }
         }
+        stage (sonar_analysis) {
+          steps {
+                node ('sonar&nexus'){
+                git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
+                sh 'sonar:sonar'
+                }
+          }
+        }
         }
 }
