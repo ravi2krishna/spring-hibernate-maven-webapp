@@ -2,6 +2,7 @@
         agent any
         tools {
                 maven 'maven'
+		SonarQube Scanner sonar
         }
   stages {
         stage(scm) {
@@ -31,7 +32,8 @@
         }
         stage (sonar_code_analysis) {
           steps {
-                sh sonar:sonar
+		node ('sonar_slave')
+                sh mvn test sonar:sonar
           }
         }
         }
