@@ -32,7 +32,7 @@
         stage (sonar_code_analysis) {
           steps {
 		node ('sonar_slave')
-                sh mvn test sonar:sonar
+                sh 'mvn test sonar:sonar'
           }
         }
         }
