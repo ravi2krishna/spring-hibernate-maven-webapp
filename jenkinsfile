@@ -32,12 +32,16 @@
         stage (sonar_code_analysis) {
           steps {
 		node ('sonar_slave'){
+
                 git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
-		sh 'mvn test sonar:sonar'
+		withSonarQubeEnv('sonar') {
+         withMaven(maven: 'mvn') {
+     sh 'mvn sonar:sonar'
+}
 		}
           }
         }
         }
 }
-       
+       }
        
