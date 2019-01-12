@@ -1,7 +1,7 @@
  pipeline {
         agent any
         tools {
-                maven 'maven'
+                maven 'Maven'
         }
   stages {
         stage(scm) {
@@ -29,6 +29,12 @@
                 }
           }
         }
-
+        stage (sonar_code_analysis) {
+          steps {
+                sh sonar:sonar
+          }
+        }
         }
 }
+       
+       
