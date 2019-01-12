@@ -2,7 +2,6 @@
         agent any
         tools {
                 maven 'maven'
-		SonarQube Scanner sonar
         }
   stages {
         stage(scm) {
