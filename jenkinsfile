@@ -25,7 +25,7 @@
           steps {
                 node ('slave1'){
                 git 'https://github.com/avinasharuri/spring-hibernate-maven-webapp.git'
-                sh 'mvn package -Dskiptest'
+                sh 'mvn package -Dskiptests'
                 }
           }
         }
