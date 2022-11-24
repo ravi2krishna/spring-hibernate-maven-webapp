@@ -11,7 +11,7 @@
 
 	<properties>
 		<springframework.version>4.0.6.RELEASE</springframework.version>
-		<hibernate.version>4.3.6.Final</hibernate.version>
+		<hibernate.version>5.3.20.Final</hibernate.version>
 		<mysql.version>5.1.31</mysql.version>
 		<joda-time.version>2.3</joda-time.version>
 		<testng.version>6.9.4</testng.version>
